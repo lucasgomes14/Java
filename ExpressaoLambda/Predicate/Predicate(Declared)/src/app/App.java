@@ -13,11 +13,6 @@ public class App {
 
 		List <Product> list = new ArrayList<>();
 
-		list.add(new Product("TV", 900.00));
-		list.add(new Product("Mouse", 50.00));
-		list.add(new Product("Tablet", 350.50));
-		list.add(new Product("HD case", 80.90));
-
 		double min = 100.0;
 
 		Predicate<Product> pred = p -> p.getPrice() >= min;
