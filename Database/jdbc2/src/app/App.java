@@ -25,12 +25,10 @@ public class App {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		DB.closeConnection();
-		try {
-			st.close();
-			rs.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		finally {
+			DB.closeConnection();
+			DB.closeStatement(st);
+			DB.closeResultSet(rs);
 		}
 		
 	}
